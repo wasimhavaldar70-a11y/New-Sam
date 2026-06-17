@@ -64,39 +64,39 @@ export default function HomePage() {
   return (
     <div className="space-y-24 pb-20">
       {/* SECTION 1: HERO SECTION */}
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-radial from-zinc-900 via-zinc-950 to-black overflow-hidden pt-20">
+      <section className="relative min-h-[65vh] flex items-center justify-center bg-radial from-zinc-900 via-zinc-950 to-black overflow-hidden pt-28 pb-16 md:pb-20">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-900/5 rounded-full blur-3xl"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8 animate-fade-in-up">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-accent text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="h-3.5 w-3.5" />
             Premium Design Destination
           </div>
 
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-none max-w-5xl mx-auto">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
             Redefine Luxury for Your <br className="hidden sm:inline" />
             <span className="bg-gradient-to-r from-accent via-amber-400 to-white bg-clip-text text-transparent">
               Living Spaces
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto font-medium">
+          <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto font-medium">
             Explore premium tiles, high-end Italian slabs, modern sanitary ware, and luxurious bath fittings at Sangli's largest designer showroom.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center pt-2">
             <Link
               href="/products"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-zinc-150 text-zinc-950 px-8 py-4 rounded-xl text-base font-bold transition-all shadow-xl hover:scale-103"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-zinc-150 text-zinc-950 px-6 py-3 rounded-xl text-base font-bold transition-all shadow-xl hover:scale-103"
             >
               Explore Products
               <ArrowRight className="h-5 w-5" />
             </Link>
             <Link
               href="/book"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 text-white px-8 py-4 rounded-xl text-base font-bold transition-all hover:scale-103 glass-panel"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 text-white px-6 py-3 rounded-xl text-base font-bold transition-all hover:scale-103 glass-panel"
             >
               <Calendar className="h-5 w-5 text-accent" />
               Book Showroom Visit
