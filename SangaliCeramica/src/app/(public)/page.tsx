@@ -117,67 +117,70 @@ export default function HomePage() {
           <div
             key={idx}
             className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out pointer-events-none ${
-              idx === currentSlide ? 'opacity-45 scale-100' : 'opacity-0 scale-105'
+              idx === currentSlide ? 'opacity-70 scale-100' : 'opacity-0 scale-105'
             }`}
             style={{ backgroundImage: `url('${slide.image}')` }}
           ></div>
         ))}
-        {/* Premium Dark and Glow Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/10 via-zinc-950/50 to-zinc-950 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-radial from-transparent via-zinc-950/75 to-zinc-950 pointer-events-none"></div>
+        {/* Premium Dark and Glow Overlays (Lightened to show BG clearly) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/5 via-zinc-950/30 to-zinc-950 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-radial from-transparent via-zinc-950/50 to-zinc-950 pointer-events-none"></div>
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293708_1px,transparent_1px),linear-gradient(to_bottom,#1f293708_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
         <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-900/5 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4.5 animate-fade-in-up">
-          {/* Dynamic Badge */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900/90 border border-zinc-800 text-accent text-[10px] font-bold uppercase tracking-wider shadow-md">
-            <Sparkles className="h-3.5 w-3.5" />
-            {slides[currentSlide].badge}
-          </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center animate-fade-in-up">
+          {/* Glassmorphic Container to protect readability */}
+          <div className="bg-zinc-950/55 backdrop-blur-md p-6 sm:p-10 md:p-12 rounded-3xl border border-zinc-800/60 shadow-2xl space-y-4.5">
+            {/* Dynamic Badge */}
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900/90 border border-zinc-800 text-accent text-[10px] font-bold uppercase tracking-wider shadow-md">
+              <Sparkles className="h-3.5 w-3.5" />
+              {slides[currentSlide].badge}
+            </div>
 
-          {/* Dynamic Heading */}
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight max-w-3xl mx-auto min-h-[4rem] sm:min-h-[6rem] flex items-center justify-center transition-all duration-500">
-            <span className="bg-gradient-to-r from-accent via-amber-400 to-white bg-clip-text text-transparent">
-              {slides[currentSlide].title}
-            </span>
-          </h1>
+            {/* Dynamic Heading */}
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight max-w-3xl mx-auto min-h-[4rem] sm:min-h-[6rem] flex items-center justify-center transition-all duration-500">
+              <span className="bg-gradient-to-r from-accent via-amber-400 to-white bg-clip-text text-transparent">
+                {slides[currentSlide].title}
+              </span>
+            </h1>
 
-          {/* Dynamic Description */}
-          <p className="text-sm md:text-base text-zinc-400 max-w-xl mx-auto font-medium min-h-[3rem] flex items-center justify-center transition-all duration-500">
-            {slides[currentSlide].desc}
-          </p>
+            {/* Dynamic Description */}
+            <p className="text-sm md:text-base text-zinc-350 max-w-xl mx-auto font-medium min-h-[3rem] flex items-center justify-center transition-all duration-500">
+              {slides[currentSlide].desc}
+            </p>
 
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2">
-            <Link
-              href={slides[currentSlide].link}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-white hover:bg-zinc-150 text-zinc-950 px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-xl hover:scale-103"
-            >
-              Explore Collection
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/book"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all hover:scale-103 glass-panel"
-            >
-              <Calendar className="h-4 w-4 text-accent" />
-              Book Showroom Visit
-            </Link>
-          </div>
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2">
+              <Link
+                href={slides[currentSlide].link}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-white hover:bg-zinc-150 text-zinc-950 px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-xl hover:scale-103"
+              >
+                Explore Collection
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/book"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-800 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all hover:scale-103 glass-panel"
+              >
+                <Calendar className="h-4 w-4 text-accent" />
+                Book Showroom Visit
+              </Link>
+            </div>
 
-          {/* Carousel Indicators */}
-          <div className="flex justify-center items-center gap-2 pt-6">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentSlide(idx)}
-                className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  idx === currentSlide ? 'w-6 bg-accent' : 'w-1.5 bg-zinc-700 hover:bg-zinc-500'
-                }`}
-                title={`Go to slide ${idx + 1}`}
-              ></button>
-            ))}
+            {/* Carousel Indicators */}
+            <div className="flex justify-center items-center gap-2 pt-4">
+              {slides.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentSlide(idx)}
+                  className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    idx === currentSlide ? 'w-6 bg-accent' : 'w-1.5 bg-zinc-700 hover:bg-zinc-500'
+                  }`}
+                  title={`Go to slide ${idx + 1}`}
+                ></button>
+              ))}
+            </div>
           </div>
         </div>
       </section>
