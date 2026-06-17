@@ -64,10 +64,18 @@ export default function HomePage() {
   return (
     <div className="space-y-24 pb-20">
       {/* SECTION 1: HERO SECTION */}
-      <section className="relative min-h-[45vh] flex items-center justify-center bg-radial from-zinc-900 via-zinc-950 to-black overflow-hidden pt-24 pb-12">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-900/5 rounded-full blur-3xl"></div>
+      <section className="relative min-h-[45vh] flex items-center justify-center bg-zinc-950 overflow-hidden pt-24 pb-12">
+        {/* Unique Luxury Marble Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-30 scale-105 pointer-events-none"
+          style={{ backgroundImage: "url('/hero_bg.png')" }}
+        ></div>
+        {/* Premium Dark and Glow Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/10 via-zinc-950/60 to-zinc-950 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-radial from-transparent via-zinc-950/80 to-zinc-950 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293708_1px,transparent_1px),linear-gradient(to_bottom,#1f293708_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-900/5 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4.5 animate-fade-in-up">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-zinc-900 border border-zinc-800 text-accent text-[10px] font-semibold uppercase tracking-wider">
