@@ -129,6 +129,18 @@ export default function HomePage() {
         <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-900/5 rounded-full blur-3xl pointer-events-none"></div>
 
+        {/* Sparkle background elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-10 left-[10%] animate-sparkle text-accent/35" style={{ animationDelay: '0s', animationDuration: '3.5s' }}><Sparkles className="h-4 w-4" /></div>
+          <div className="absolute top-24 right-[12%] animate-sparkle text-accent/25" style={{ animationDelay: '1.2s', animationDuration: '4.2s' }}><Sparkles className="h-5 w-5" /></div>
+          <div className="absolute bottom-20 left-[15%] animate-sparkle text-accent/30" style={{ animationDelay: '2.5s', animationDuration: '3.8s' }}><Sparkles className="h-3 w-3" /></div>
+          <div className="absolute bottom-28 right-[20%] animate-sparkle text-accent/35" style={{ animationDelay: '0.8s', animationDuration: '4.5s' }}><Sparkles className="h-4 w-4" /></div>
+          <div className="absolute top-1/3 left-[28%] animate-sparkle text-accent/20" style={{ animationDelay: '3.1s', animationDuration: '3.0s' }}><Sparkles className="h-3 w-3" /></div>
+          <div className="absolute top-1/2 right-[25%] animate-sparkle text-accent/30" style={{ animationDelay: '1.7s', animationDuration: '3.9s' }}><Sparkles className="h-4 w-4" /></div>
+          <div className="absolute bottom-12 left-[40%] animate-sparkle text-accent/25" style={{ animationDelay: '4.0s', animationDuration: '5.0s' }}><Sparkles className="h-5 w-5" /></div>
+          <div className="absolute top-16 left-[45%] animate-sparkle text-accent/20" style={{ animationDelay: '2.0s', animationDuration: '3.2s' }}><Sparkles className="h-3 w-3" /></div>
+        </div>
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center animate-fade-in-up">
           {/* Glassmorphic Container to protect readability */}
           <div className="bg-zinc-950/55 backdrop-blur-md p-6 sm:p-10 md:p-12 rounded-3xl border border-zinc-800/60 shadow-2xl space-y-4.5">
