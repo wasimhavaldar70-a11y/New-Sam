@@ -117,14 +117,14 @@ export default function HomePage() {
           <div
             key={idx}
             className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out pointer-events-none ${
-              idx === currentSlide ? 'opacity-25 scale-100' : 'opacity-0 scale-105'
+              idx === currentSlide ? 'opacity-45 scale-100' : 'opacity-0 scale-105'
             }`}
             style={{ backgroundImage: `url('${slide.image}')` }}
           ></div>
         ))}
         {/* Premium Dark and Glow Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/20 via-zinc-950/70 to-zinc-950 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-radial from-transparent via-zinc-950/85 to-zinc-950 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/10 via-zinc-950/50 to-zinc-950 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-radial from-transparent via-zinc-950/75 to-zinc-950 pointer-events-none"></div>
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293708_1px,transparent_1px),linear-gradient(to_bottom,#1f293708_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
         <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-900/5 rounded-full blur-3xl pointer-events-none"></div>
